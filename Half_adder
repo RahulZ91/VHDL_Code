@@ -1,0 +1,13 @@
+library IEEE;
+use IEEE.std_logic_1164.all;  -- contains the defintion for std_ulogic
+
+entity HalfAdder is
+port(a,b: in std_ulogic;
+	 s,c :out std_ulogic);
+end HalfAdder;
+
+architecture simHA of HalfAdder is
+begin
+	s<=(a xor b) after 100 ns;
+	c<=(a and b) after 100 ns;
+end simHA;
